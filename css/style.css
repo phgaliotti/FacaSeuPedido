@@ -1,0 +1,21 @@
+html, body {height: 100%;}
+
+body { margin: 0; padding: 0;}
+header {width: 100%; height: 600px; background-image: url('../img/banner.jpg'); background-color: rgba(0, 0, 0, 0.6); background-repeat: no-repeat; background-position: center; background-size: cover; margin: 0px; position: absolute;}
+.topo {width: 100%; height: 50px;padding: 10px; color: #fff;}
+.logo {display: inline-block;}
+.minimenu {float: right; display: inline-block;}
+
+.content {margin: 0 auto;  height: 150px; width: 500px; background-color: rgba(0, 0, 0, 0.6); padding: 4px 0 ; position: relative; top: 250px; color: #fff; text-align: center; border-radius: .2em;}
+.button {padding: .2em 3em; cursor: pointer; background-color: rgb(230, 83, 36); border-radius: .1em;}
+.content span {font-size: 30px;}
+
+.cadastro {background-color: #cccccc; width: 90%; height: 28em; margin: 0 auto; margin-top: 450px;}
+.box_cadastro {background-color: #ffff66; width: 100%; height: 28em; text-align: right; padding: 10px 50px 50px;}
+.box_cadastro label, input {margin: 5px auto; }
+
+footer {background-color: #0099cc;  width: 100%; height: 200px; bottom: 0;}
+.coments {background-color: #ffcc66; width: 100%; height: 100px; display: block;}
+.social_medias {display: inline-block; float: left; width: 50%; height: 90%; }
+.facebook_posts {background-color: #99ff66; margin: 0 auto;}
+.twitter_posts {background-color: #00ff99; margin: 0 auto;}
