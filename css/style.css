@@ -1,13 +1,25 @@
 html, body {height: 100%;}
+body {margin: 0; padding: 0;}
 
-body { margin: 0; padding: 0;}
-header {width: 100%; height: 600px; background-image: url('../img/banner.jpg'); background-color: rgba(0, 0, 0, 0.6); background-repeat: no-repeat; background-position: center; background-size: cover; margin: 0px; position: absolute;}
+header {
+    width: 100%; 
+    height: 600px; 
+    background-image: url('../img/banner.jpg'); 
+    background-color: rgba(0, 0, 0, 0.6); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+    margin: 0px; 
+    position: absolute;
+}
 .topo {width: 100%; height: 50px;padding: 10px; color: #fff;}
 .logo {display: inline-block;}
 .minimenu {float: right; display: inline-block;}
 
 .content {margin: 0 auto;  height: 150px; width: 500px; background-color: rgba(0, 0, 0, 0.6); padding: 4px 0 ; position: relative; top: 250px; color: #fff; text-align: center; border-radius: .2em;}
-.button {padding: .2em 3em; cursor: pointer; background-color: rgb(230, 83, 36); border-radius: .1em;}
+.button {cursor: pointer; border-radius: .1em;}
+.button_cadastrar {padding: .2em 3em; background-color: rgb(230, 83, 36); color: #fff; }
+.button_entrar {padding: .4em  6.8em; background-color: rgb(407, 165, 36); color: #fff; margin-top: 10px;}
 .content span {font-size: 30px;}
 
 .cadastro {background-color: #cccccc; width: 90%; height: 28em; margin: 0 auto; margin-top: 450px;}
@@ -19,3 +31,37 @@ footer {background-color: #0099cc;  width: 100%; height: 200px; bottom: 0;}
 .social_medias {display: inline-block; float: left; width: 50%; height: 90%; }
 .facebook_posts {background-color: #99ff66; margin: 0 auto;}
 .twitter_posts {background-color: #00ff99; margin: 0 auto;}
+
+/* Modal */
+
+#mask {
+    position:absolute;
+    z-index:9000;  
+    background-color:#000; 
+    display:none;
+}
+
+#boxes .window {
+    position:absolute;
+    width:440px;
+    height:200px;
+    display:none;
+    z-index:9999;
+    padding:10px;
+}
+
+/* Personalize a janela modal aqui. Você pode adicionar uma imagem de fundo. */
+#boxes #dialog {
+    background-color: #fff;
+    color: #4C4E4E;
+    font-size: 20px;
+    text-align: center;
+    border-radius: .1em;
+    width:375px;
+    height:220px;
+}
+/* posiciona o link para fechar a janela */
+.close { 
+    display:block; 
+    text-align:right;
+}  

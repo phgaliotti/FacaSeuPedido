@@ -1,38 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.2.2.js"   integrity="sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE="   crossorigin="anonymous"></script>
+        <script src="js/modal.js" type="text/javascript"></script>
+
         <meta charset="UTF-8">
-        
+
         <link rel="stylesheet" href="css/style.css">
-        
+
         <title></title>
-        
+
+        <script type="text/javascript">
+            function ViewCadastro() {
+                $('#cadastro').css({display: ''});
+                $('#coments').css({'margin-top': 0});
+                $('html, body').animate({
+                    scrollTop: $("#cadastro").offset().top     //função offset() retorna as coordenadas do elemnto na página
+                }, 1000);
+                $("#nome").focus();
+            }
+
+        </script>
+
+
     </head>
     <body>
         <?php
-         require_once 'header.php';
+        require_once 'header.php';
         ?>
+
+        <div id="boxes">
+            <div id="dialog" class="window">
+                <b>Acessar meu cadastro</b>
+                <a href="#" class="close">X</a>
+                <input class="form-control input-lg" type="text" name="username" placeholder="Email"/>
+                <input class="form-control input-lg" style="margin: 10px 0;" type="text" name="password" placeholder="Senha"/>
+                <a href="#" ><span style="float: right; font-size: 13px; margin-bottom: 10px;">Esqueci minha senha</span></a>
+                <span class="button button_entrar">ENTRAR</span>
+            </div>
+            <!-- Não remova o div#mask, pois ele é necessário para preencher toda a janela -->
+            <div id="mask"></div>
+        </div>
 
 
         <div class="content">
-            <div class="box_content pedido">
+            <div class="box_content pedido" >
                 <h2>Faça já o seu pedido Online</h2>
                 <p>Faça seu cadastro e comece agora a utilizar os nossos serviços</p>
-                <span class="button">CADASTRAR</span>
+                <span class="button button_cadastrar" onclick="ViewCadastro()">CADASTRAR</span>
             </div>
-         
+
         </div>
 
-        <div class="cadastro">
+        <div id="cadastro" class="cadastro" style="display: none;">
             <div class="box_cadastro">
-                
-                <label class="col-sm-2 col-lg-2">Nome:</label> <div class="col-sm-10 col-lg-10"><input class= " form-control" type="text" maxlength="100" /></div>
+
+                <label class="col-sm-2 col-lg-2">Nome:</label> <div class="col-sm-10 col-lg-10"><input id="nome" name="nome" class= " form-control" type="text" maxlength="100" /></div>
                 <label class="col-sm-2 col-lg-2">E-mail:</label><div class="col-sm-10 col-lg-10"><input class="form-control" type="email" maxlength="150" /></div>
                 <label class="col-sm-2 col-lg-2">CPF:</label><div class="col-sm-4  col-lg-4"> <input class="form-control " type="number" maxlength="11" /></div>
                 <label class="col-sm-1 col-lg-1">RG:</label><div class="col-sm-4 col-lg-4"> <input class="form-control" type="number" maxlength="10" /></div>
@@ -44,8 +70,8 @@
             </div>
         </div>
 
-        <div class="coments">
-            <div class="social_medias facebook_posts">O que estão falando no facebook</div>
+        <div id="coments" class="coments" style="margin-top: 450px;">
+            <div id="facebook" class="social_medias facebook_posts">O que estão falando no facebook</div>
             <div class="social_medias  twitter_posts">O que estão falando no twitter</div>
         </div>
 
