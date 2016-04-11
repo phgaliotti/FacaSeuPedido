@@ -30,6 +30,10 @@
     <body>
         <?php
         require_once 'header.php';
+
+        ini_set("display_errors", 1);
+        error_reporting(E_ALL);
+
         ?>
 
         <div id="boxes">
@@ -57,16 +61,17 @@
 
         <div id="cadastro" class="cadastro" style="display: none;">
             <div class="box_cadastro">
-
-                <label class="col-sm-2 col-lg-2">Nome:</label> <div class="col-sm-10 col-lg-10"><input id="nome" name="nome" class= " form-control" type="text" maxlength="100" /></div>
-                <label class="col-sm-2 col-lg-2">E-mail:</label><div class="col-sm-10 col-lg-10"><input class="form-control" type="email" maxlength="150" /></div>
-                <label class="col-sm-2 col-lg-2">CPF:</label><div class="col-sm-4  col-lg-4"> <input class="form-control " type="number" maxlength="11" /></div>
-                <label class="col-sm-1 col-lg-1">RG:</label><div class="col-sm-4 col-lg-4"> <input class="form-control" type="number" maxlength="10" /></div>
-                <label class="col-sm-2 col-lg-2">Bairro:</label><div class="col-sm-10 col-lg-10"> <input class="form-control" type="text" maxlength="200" /></div>
-                <label class="col-sm-2 col-lg-2">Endereço:</label><div class="col-sm-10  col-lg-10"> <input class="form-control" type="text" maxlength="250" /></div>
-                <label class="col-sm-2 col-lg-2">Numero:</label><div class="col-sm-10  col-lg-10"> <input class="form-control" type="text" maxlength="5" /></div>
-                <label class="col-sm-2 col-lg-2">Telefone:</label> <div class="col-sm-4  col-lg-4"> <input class="form-control" type="text" maxlength="20" /></div>
-                <label class="col-sm-1 col-lg-1">Celular:</label> <div class="col-sm-4  col-lg-4"> <input class="form-control" type="text" maxlength="22" /></div>
+                <form method="POST" action="executaUsuario.php" >
+                    <label class="col-sm-2 col-lg-2">Nome:</label> <div class="col-sm-10 col-lg-10"><input id="nome" name="nome" class= " form-control" type="text" maxlength="100" /></div>
+                    <label class="col-sm-2 col-lg-2">E-mail:</label><div class="col-sm-10 col-lg-10"><input class="form-control" name="email" type="email" maxlength="150" /></div>
+                    <label class="col-sm-2 col-lg-2">CPF:</label><div class="col-sm-4  col-lg-4"> <input class="form-control " type="text" name="cpf" maxlength="11" /></div>
+                    <label class="col-sm-1 col-lg-1">RG:</label><div class="col-sm-4 col-lg-4"> <input class="form-control" type="text" name="rg" maxlength="10" /></div>
+                    <label class="col-sm-2 col-lg-2">Bairro:</label><div class="col-sm-10 col-lg-10"> <input class="form-control" type="text" name="bairro" maxlength="200" /></div>
+                    <label class="col-sm-2 col-lg-2">Endereço:</label><div class="col-sm-7  col-lg-7"> <input class="form-control" type="text" name="endereco" maxlength="250" /></div>
+                    <label class="col-sm-1 col-lg-1">Numero:</label><div class="col-sm-2  col-lg-2"> <input class="form-control" type="text" name="numero" maxlength="5" /></div>
+                    <label class="col-sm-2 col-lg-2">Telefone:</label> <div class="col-sm-4  col-lg-4"> <input class="form-control" type="text" name="telefone" maxlength="20" /></div>
+                    <label class="col-sm-1 col-lg-1">Celular:</label> <div class="col-sm-4  col-lg-4"> <input class="form-control" type="text" name="celular" maxlength="22" /></div>
+                </form>
             </div>
         </div>
 
@@ -84,7 +89,6 @@
 
 
         <footer></footer>
-
 
     </body>
 </html>

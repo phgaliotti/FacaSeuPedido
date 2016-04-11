@@ -19,6 +19,7 @@ header {
 .content {margin: 0 auto;  height: 150px; width: 500px; background-color: rgba(0, 0, 0, 0.6); padding: 4px 0 ; position: relative; top: 250px; color: #fff; text-align: center; border-radius: .2em;}
 .button {cursor: pointer; border-radius: .1em;}
 .button_cadastrar {padding: .2em 3em; background-color: rgb(230, 83, 36); color: #fff; }
+.button_cadastrar:hover {background-color: rgb(270, 83, 36)}
 .button_entrar {padding: .4em  6.8em; background-color: rgb(407, 165, 36); color: #fff; margin-top: 10px;}
 .content span {font-size: 30px;}
 
